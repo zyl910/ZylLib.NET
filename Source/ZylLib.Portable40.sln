@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.Portable40", "ZylLib\ZylLib.Portable40.csproj", "{0A57C19C-16BA-4D89-AD09-9F75419F6923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.TestConsole.Portable40", "ZylLib.TestConsole\ZylLib.TestConsole.Portable40.csproj", "{823F832D-FA98-48E5-BB2C-3F5B3C4BFCBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A57C19C-16BA-4D89-AD09-9F75419F6923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A57C19C-16BA-4D89-AD09-9F75419F6923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A57C19C-16BA-4D89-AD09-9F75419F6923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A57C19C-16BA-4D89-AD09-9F75419F6923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823F832D-FA98-48E5-BB2C-3F5B3C4BFCBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823F832D-FA98-48E5-BB2C-3F5B3C4BFCBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823F832D-FA98-48E5-BB2C-3F5B3C4BFCBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823F832D-FA98-48E5-BB2C-3F5B3C4BFCBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
