@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZylLib</name>
+    </assembly>
+    <members>
+        <member name="T:ZylLib.GacGetListOptions">
+            <summary>
+            取得Gac列表时的选项.
+            </summary>
+        </member>
+        <member name="F:ZylLib.GacGetListOptions.Default">
+            <summary>
+            默认.
+            </summary>
+        </member>
+        <member name="F:ZylLib.GacGetListOptions.AutoSort">
+            <summary>
+            自动排序.
+            </summary>
+        </member>
+        <member name="F:ZylLib.GacGetListOptions.Fallback">
+            <summary>
+            失败时回退，不抛出异常。先枚举GAC，失败时枚举当前应用程序域中的程序集，再失败时返回自身程序集，最后仍失败时返回0个元素的列表.
+            </summary>
+        </member>
+        <member name="T:ZylLib.ASM_CACHE_FLAGS">
+            <summary>
+            指示由全局程序集缓存中的 IAssemblyCacheItem 表示的程序集的源。
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_CACHE_FLAGS.ASM_CACHE_ZAP">
+            <summary>
+            使用 Ngen.exe 枚举预先编译的程序集的缓存。
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_CACHE_FLAGS.ASM_CACHE_GAC">
+            <summary>
+            枚举全局程序集缓存。
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_CACHE_FLAGS.ASM_CACHE_DOWNLOAD">
+            <summary>
+            枚举已经根据需要下载的程序集或已经进行了影像复制的程序集。
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_CACHE_FLAGS.ASM_CACHE_ROOT">
+            <summary>
+            仅在调用 GetCachePath 函数的上下文中，ASM_CACHE_ROOT 才有意义。
+            </summary>
+        </member>
+        <member name="T:ZylLib.ASM_DISPLAY_FLAGS">
+            <summary>
+            指示将通过 IAssemblyName::GetDisplayName 方法检索其显示名称的程序集的版本、内部版本、区域性、签名等。
+            </summary>
+            <remarks>http://msdn.microsoft.com/en-us/library/ms232947(v=vs.110).aspx</remarks>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_VERSION">
+            <summary>
+            VERSION
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_CULTURE">
+            <summary>
+            CULTURE
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_PUBLIC_KEY_TOKEN">
+            <summary>
+            PUBLIC_KEY_TOKEN
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_PUBLIC_KEY">
+            <summary>
+            PUBLIC_KEY
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_CUSTOM">
+            <summary>
+            CUSTOM
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_PROCESSORARCHITECTURE">
+            <summary>
+            PROCESSORARCHITECTURE
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_LANGUAGEID">
+            <summary>
+            LANGUAGEID
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_RETARGET">
+            <summary>
+            RETARGET
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_CONFIG_MASK">
+            <summary>
+            CONFIG_MASK
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_MVID">
+            <summary>
+            MVID
+            </summary>
+        </member>
+        <member name="F:ZylLib.ASM_DISPLAY_FLAGS.ASM_DISPLAYF_FULL">
+            <summary>
+            ASM_DISPLAYF_FULL reflects any changes made to the version of the <see cref="T:ZylLib.IAssemblyName"/> object. Do not assume that the returned value is immutable.
+            </summary>
+        </member>
+        <member name="T:ZylLib.IAssemblyName">
+            <summary>
+            提供描述和使用程序集唯一标识的方法。
+            </summary>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.SetProperty(System.Int32,System.IntPtr,System.Int32)">
+            <summary>
+            设置指定的 PropertyId 所引用的属性的值。
+            </summary>
+            <param name="PropertyId"></param>
+            <param name="pvProperty"></param>
+            <param name="cbProperty"></param>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.GetProperty(System.Int32,System.IntPtr,System.Int32@)">
+            <summary>
+            获取一个指针，该指针指向指定的 PropertyId 引用的属性。
+            </summary>
+            <param name="PropertyId"></param>
+            <param name="pvProperty"></param>
+            <param name="pcbProperty"></param>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.Finalize">
+            <summary>
+            允许此 IAssemblyName 对象在其析构函数被调用之前释放资源并执行其他清理操作。
+            </summary>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.GetDisplayName(System.Text.StringBuilder,System.Int32@,ZylLib.ASM_DISPLAY_FLAGS)">
+            <summary>
+            获取此 IAssemblyName 对象引用的程序集的可读名称。
+            </summary>
+            <param name="szDisplayName"></param>
+            <param name="pccDisplayName"></param>
+            <param name="dwDisplayFlags"></param>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.Reserved(System.Guid@,System.IntPtr,System.IntPtr,System.String,System.Int64,System.IntPtr,System.Int32,System.IntPtr)">
+            <summary>
+            Reserved
+            </summary>
+            <param name="refIID"></param>
+            <param name="pUnkReserved1"></param>
+            <param name="pUnkReserved2"></param>
+            <param name="szReserved"></param>
+            <param name="llReserved"></param>
+            <param name="pvReserved"></param>
+            <param name="cbReserved"></param>
+            <param name="ppReserved"></param>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.GetName(System.Int32@,System.Text.StringBuilder)">
+            <summary>
+            获取此 IAssemblyName 对象引用的程序集的简单、未加密名称。
+            </summary>
+            <param name="lpcwBuffer"></param>
+            <param name="pwzName"></param>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.GetVersion(System.Int32@,System.Int32@)">
+            <summary>
+            获取此 IAssemblyName 对象所引用的程序集的版本信息。
+            </summary>
+            <param name="pdwVersionHi"></param>
+            <param name="pdwVersionLow"></param>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.IsEqual(ZylLib.IAssemblyName,System.Int32)">
+            <summary>
+            根据指定的比较标志，确定指定的 IAssemblyName 对象是否与此 IAssemblyName 相同。
+            </summary>
+            <param name="pName"></param>
+            <param name="dwCmpFlags"></param>
+        </member>
+        <member name="M:ZylLib.IAssemblyName.Clone(ZylLib.IAssemblyName@)">
+            <summary>
+            创建此 IAssemblyName 对象的浅表副本。
+            </summary>
+            <param name="pName"></param>
+        </member>
+        <member name="T:ZylLib.GacUtil">
+            <summary>
+            GAC(Global Assembly Cache) 工具类.
+            </summary>
+        </member>
+        <member name="F:ZylLib.GacUtil.DefaultStringBufferSize">
+            <summary>
+            默认字符串缓冲区长度.
+            </summary>
+        </member>
+        <member name="M:ZylLib.GacUtil.CreateAssemblyEnum(ZylLib.IAssemblyEnum@,System.IntPtr,System.IntPtr,ZylLib.ASM_CACHE_FLAGS,System.IntPtr)">
+            <summary>
+            获取一个指针，该指针指向 IAssemblyEnum 实例，该实例可枚举具有指定 IAssemblyName 的程序集中的对象。
+            </summary>
+            <param name="pEnum">指向一个内存位置的指针，该内存位置包含请求的 IAssemblyEnum 指针。</param>
+            <param name="pUnkReserved">保留以用于将来扩展。pUnkReserved 必须为 null 引用。</param>
+            <param name="pName">请求的程序集的 IAssemblyName。此名称用于筛选枚举。它可以为 null，以枚举全局程序集缓存中的所有程序集。</param>
+            <param name="dwFlags">用于修改枚举数行为的标志。此参数正好包含 ASM_CACHE_FLAGS 枚举中的一位。</param>
+            <param name="pvReserved">保留以用于将来扩展。pvReserved 必须为 null 引用。</param>
+            <returns>HRESULT</returns>
+        </member>
+        <member name="M:ZylLib.GacUtil.EnumerateIAssemblyName(ZylLib.ASM_CACHE_FLAGS)">
+            <summary>
+            枚举 <see cref="T:ZylLib.IAssemblyName"/> 信息.
+            </summary>
+            <param name="dwCacheFlags">缓存标志.</param>
+            <returns>返回 <see cref="T:System.Collections.Generic.IEnumerable`1"/>. </returns>
+            <exception cref="T:System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+        </member>
+        <member name="M:ZylLib.GacUtil.GacEnumerateIAssemblyName">
+            <summary>
+            在GAC中枚举 <see cref="T:ZylLib.IAssemblyName"/> 信息.
+            </summary>
+            <returns>返回 <see cref="T:System.Collections.Generic.IEnumerable`1"/>. </returns>
+            <exception cref="T:System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+        </member>
+        <member name="M:ZylLib.GacUtil.EnumerateAssemblyName(ZylLib.ASM_CACHE_FLAGS,ZylLib.ASM_DISPLAY_FLAGS)">
+            <summary>
+            枚举程序集名称.
+            </summary>
+            <param name="dwCacheFlags">缓存标志.</param>
+            <param name="dwDisplayFlags">显示标志.</param>
+            <returns>返回 <see cref="T:System.Collections.Generic.IEnumerable`1"/>. </returns>
+            <exception cref="T:System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+        </member>
+        <member name="M:ZylLib.GacUtil.GacEnumerateAssemblyName(ZylLib.ASM_DISPLAY_FLAGS)">
+            <summary>
+            在GAC中枚举程序集名称.
+            </summary>
+            <param name="dwDisplayFlags">显示标志.</param>
+            <returns>返回 <see cref="T:System.Collections.Generic.IEnumerable`1"/>. </returns>
+            <exception cref="T:System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+        </member>
+        <member name="M:ZylLib.GacUtil.GetAssemblyNameList(ZylLib.ASM_CACHE_FLAGS,ZylLib.ASM_DISPLAY_FLAGS,ZylLib.GacGetListOptions)">
+            <summary>
+            取得程序集名称列表.
+            </summary>
+            <param name="dwCacheFlags">缓存标志.</param>
+            <param name="dwDisplayFlags">显示标志.</param>
+            <param name="listoptions">列表选项.</param>
+            <returns>返回程序集名称列表.</returns>
+            <exception cref="T:System.DllNotFoundException">当 <paramref name="listoptions"/> 没有 <see cref="F:ZylLib.GacGetListOptions.Fallback"/> 标志时 , 在mono等环境下有可能找不到dll.</exception>
+        </member>
+        <member name="M:ZylLib.GacUtil.GacGetAssemblyNameList(ZylLib.ASM_DISPLAY_FLAGS,ZylLib.GacGetListOptions)">
+            <summary>
+            在Gac中取得程序集名称列表.
+            </summary>
+            <param name="dwDisplayFlags">显示标志.</param>
+            <param name="listoptions">列表选项.</param>
+            <returns>返回程序集名称列表.</returns>
+            <exception cref="T:System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+        </member>
+    </members>
+</doc>
