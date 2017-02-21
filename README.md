@@ -1,7 +1,7 @@
 ZylLib.NET
 ==========
 
-[zyl910](https://github.com/zyl910)'s C# librarys.
+[zyl910](https://github.com/zyl910)'s C# library.
 
 ## Files
 

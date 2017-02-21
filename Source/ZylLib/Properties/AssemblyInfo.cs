@@ -5,8 +5,32 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过下列属性集
 // 控制。更改这些属性值可修改
 // 与程序集关联的信息。
+#if NET46
+#if PORTABLE
+[assembly: AssemblyTitle("ZylLib.NET for Portable .NET 4.6")]
+#else
+[assembly: AssemblyTitle("ZylLib.NET for .NET 4.6")]
+#endif
+#elif NET45
+#if PORTABLE
+[assembly: AssemblyTitle("ZylLib.NET for Portable .NET 4.5")]
+#else
+[assembly: AssemblyTitle("ZylLib.NET for .NET 4.5")]
+#endif
+#elif NET40
+#if PORTABLE
+[assembly: AssemblyTitle("ZylLib.NET for Portable .NET 4.0")]
+#else
+[assembly: AssemblyTitle("ZylLib.NET for .NET 4.0")]
+#endif
+#elif NET35
+[assembly: AssemblyTitle("ZylLib.NET for .NET 3.5")]
+#elif NET20
+[assembly: AssemblyTitle("ZylLib.NET for .NET 2.0")]
+#else
 [assembly: AssemblyTitle("ZylLib.NET")]
-[assembly: AssemblyDescription("zyl910's C# librarys.")]
+#endif
+[assembly: AssemblyDescription("zyl910's C# library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("zyl910")]
 [assembly: AssemblyProduct("ZylLib.NET")]
