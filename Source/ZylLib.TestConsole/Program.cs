@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Reflection;
 using ZylLib;
 
 namespace ZylLib.TestConsole {
@@ -9,8 +10,15 @@ namespace ZylLib.TestConsole {
 		static void Main(string[] args) {
 			Console.WriteLine("ZylLib.TestConsole");
 
-			string version = FileVersionInfo.GetVersionInfo(typeof(GacUtil).Assembly.Location).FileVersion;
-			Console.WriteLine("Json.NET Version: " + version);
+			Assembly assembly = typeof(GacUtil).Assembly;
+			string version = FileVersionInfo.GetVersionInfo(assembly.Location).FileVersion;
+			Console.WriteLine("ZylLib.NET Version: " + version);
+			Console.WriteLine("ZylLib.NET Assembly: " + assembly.FullName);
+			Console.WriteLine("Environment.MachineName: " + Environment.MachineName);
+			Console.WriteLine("Environment.OSVersion: " + Environment.OSVersion);
+			Console.WriteLine("Environment.ProcessorCount: " + Environment.ProcessorCount);
+			Console.WriteLine("Environment.Version: " + Environment.Version);
+			
 		}
 	}
 }
