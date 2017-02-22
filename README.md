@@ -14,6 +14,11 @@ Project suffix:
 - Portable45: .NET 4.5, C# 5.0. Windows Phone 8, Windows 8 Store, .NET Core
 - Portable46: .NET 4.6, C# 6.0. Windows 10 Store, .NET Core
 
+Test project suffix:
+
+- App45: .NET 4.5, Windows Store .
+
+
 ## Conditional compilation symbols
 
 * NET20: .NET 2.0, C# 2.0 .
