@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Reflection;
-using ZylLib;
+using ZylLib.System;
 
 namespace ZylLib.TestConsole {
 	class Program {

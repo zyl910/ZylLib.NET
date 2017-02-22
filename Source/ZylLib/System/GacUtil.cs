@@ -4,7 +4,7 @@ using System.Text;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-namespace ZylLib {
+namespace ZylLib.System {
 
 	/// <summary>
 	/// 取得Gac列表时的选项.
@@ -252,7 +252,7 @@ namespace ZylLib {
 		/// </summary>
 		/// <param name="dwCacheFlags">缓存标志.</param>
 		/// <returns>返回 <see cref="IEnumerable&lt;IAssemblyName&gt;"/>. </returns>
-		/// <exception cref="System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+		/// <exception cref="global::System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
 		public static IEnumerable<IAssemblyName> EnumerateIAssemblyName(ASM_CACHE_FLAGS dwCacheFlags) {
 			IAssemblyEnum gacEnum;
 			//创建GAC程序集的枚举器
@@ -287,7 +287,7 @@ namespace ZylLib {
 		/// 在GAC中枚举 <see cref="IAssemblyName"/> 信息.
 		/// </summary>
 		/// <returns>返回 <see cref="IEnumerable&lt;IAssemblyName&gt;"/>. </returns>
-		/// <exception cref="System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+		/// <exception cref="global::System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
 		public static IEnumerable<IAssemblyName> GacEnumerateIAssemblyName() {
 			return EnumerateIAssemblyName(ASM_CACHE_FLAGS.ASM_CACHE_GAC);
 		}
@@ -298,7 +298,7 @@ namespace ZylLib {
 		/// <param name="dwCacheFlags">缓存标志.</param>
 		/// <param name="dwDisplayFlags">显示标志.</param>
 		/// <returns>返回 <see cref="IEnumerable&lt;String&gt;"/>. </returns>
-		/// <exception cref="System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+		/// <exception cref="global::System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
 		public static IEnumerable<String> EnumerateAssemblyName(ASM_CACHE_FLAGS dwCacheFlags, ASM_DISPLAY_FLAGS dwDisplayFlags) {
 			foreach (IAssemblyName asm in EnumerateIAssemblyName(dwCacheFlags)) {
 				int ccbuf = DefaultStringBufferSize;
@@ -313,7 +313,7 @@ namespace ZylLib {
 		/// </summary>
 		/// <param name="dwDisplayFlags">显示标志.</param>
 		/// <returns>返回 <see cref="IEnumerable&lt;String&gt;"/>. </returns>
-		/// <exception cref="System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+		/// <exception cref="global::System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
 		public static IEnumerable<String> GacEnumerateAssemblyName(ASM_DISPLAY_FLAGS dwDisplayFlags) {
 			return EnumerateAssemblyName(ASM_CACHE_FLAGS.ASM_CACHE_GAC, dwDisplayFlags);
 		}
@@ -326,7 +326,7 @@ namespace ZylLib {
 		/// <param name="dwDisplayFlags">显示标志.</param>
 		/// <param name="listoptions">列表选项.</param>
 		/// <returns>返回程序集名称列表.</returns>
-		/// <exception cref="System.DllNotFoundException">当 <paramref name="listoptions"/> 没有 <see cref="GacGetListOptions.Fallback"/> 标志时 , 在mono等环境下有可能找不到dll.</exception>
+		/// <exception cref="global::System.DllNotFoundException">当 <paramref name="listoptions"/> 没有 <see cref="GacGetListOptions.Fallback"/> 标志时 , 在mono等环境下有可能找不到dll.</exception>
 		public static List<String> GetAssemblyNameList(ASM_CACHE_FLAGS dwCacheFlags, ASM_DISPLAY_FLAGS dwDisplayFlags, GacGetListOptions listoptions) {
 			List<String> lst = new List<string>();
 			// get list.
@@ -389,7 +389,7 @@ namespace ZylLib {
 		/// <param name="dwDisplayFlags">显示标志.</param>
 		/// <param name="listoptions">列表选项.</param>
 		/// <returns>返回程序集名称列表.</returns>
-		/// <exception cref="System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
+		/// <exception cref="global::System.DllNotFoundException">在mono等环境下有可能找不到dll.</exception>
 		public static List<String> GacGetAssemblyNameList(ASM_DISPLAY_FLAGS dwDisplayFlags, GacGetListOptions listoptions) {
 			return GetAssemblyNameList(ASM_CACHE_FLAGS.ASM_CACHE_GAC, dwDisplayFlags, listoptions);
 		}

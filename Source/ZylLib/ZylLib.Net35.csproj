@@ -52,6 +52,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System\GacUtil.cs" />
+    <Compile Include="System\TypeNameComparer.cs" />
+    <Compile Include="System\TypeUtil.cs" />
+    <Compile Include="Text\BaseIndentedWriter.cs" />
+    <Compile Include="Text\IIndentedWriter.cs" />
+    <Compile Include="Text\IndentedWriterContext.cs" />
+    <Compile Include="Text\IndentedWriterMemberEventArgs.cs" />
+    <Compile Include="Text\IndentedWriterObjectFunctor.cs" />
+    <Compile Include="Text\IndentedWriterUtil.cs" />
+    <Compile Include="Text\StringEscapeC.cs" />
+    <Compile Include="Text\TextIndentedWriter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
