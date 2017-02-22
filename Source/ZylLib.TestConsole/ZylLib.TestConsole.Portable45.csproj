@@ -46,7 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.Portable45\App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZylLib\ZylLib.Portable45.csproj">
