@@ -151,10 +151,12 @@ namespace ZylLib.System {
 			/* [out] */ IntPtr pvProperty,
 			/* [out][in] */ out int pcbProperty);
 
+#pragma warning disable 0465	// 引入“Finalize”方法会妨碍析构函数调用。您是要声明析构函数吗?
 		/// <summary>
 		/// 允许此 IAssemblyName 对象在其析构函数被调用之前释放资源并执行其他清理操作。
 		/// </summary>
 		void Finalize();
+#pragma warning restore 0465
 
 		/// <summary>
 		/// 获取此 IAssemblyName 对象引用的程序集的可读名称。
