@@ -321,7 +321,7 @@ namespace ZylLib.Text {
 				}, context);
 			}
 			catch (Exception ex) {
-				global::System.Diagnostics.Trace.WriteLine(ex);
+				global::System.Diagnostics.Debug.WriteLine(ex);
 			}
 			needtitle = needtitle2;
 		}

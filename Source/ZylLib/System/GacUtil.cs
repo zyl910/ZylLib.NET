@@ -93,7 +93,7 @@ namespace ZylLib.System {
 		/// </summary>
 		ASM_DISPLAYF_MVID = 0x200,
 		/// <summary>
-		/// ASM_DISPLAYF_FULL reflects any changes made to the version of the <see cref="IAssemblyName"/> object. Do not assume that the returned value is immutable.
+		/// ASM_DISPLAYF_FULL reflects any changes made to the version of the IAssemblyName object. Do not assume that the returned value is immutable.
 		/// </summary>
 		ASM_DISPLAYF_FULL =
 						  ASM_DISPLAYF_VERSION |
