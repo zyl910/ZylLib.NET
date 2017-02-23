@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
@@ -7,48 +7,48 @@ using System.Runtime.InteropServices;
 namespace ZylLib.System {
 
 	/// <summary>
-	/// È¡µÃGacÁĞ±íÊ±µÄÑ¡Ïî.
+	/// å–å¾—Gacåˆ—è¡¨æ—¶çš„é€‰é¡¹.
 	/// </summary>
 	[Flags]
 	public enum GacGetListOptions {
 		/// <summary>
-		/// Ä¬ÈÏ.
+		/// é»˜è®¤.
 		/// </summary>
 		Default = 0,
 		/// <summary>
-		/// ×Ô¶¯ÅÅĞò.
+		/// è‡ªåŠ¨æ’åº.
 		/// </summary>
 		AutoSort = 1,
 		/// <summary>
-		/// Ê§°ÜÊ±»ØÍË£¬²»Å×³öÒì³£¡£ÏÈÃ¶¾ÙGAC£¬Ê§°ÜÊ±Ã¶¾Ùµ±Ç°Ó¦ÓÃ³ÌĞòÓòÖĞµÄ³ÌĞò¼¯£¬ÔÙÊ§°ÜÊ±·µ»Ø×ÔÉí³ÌĞò¼¯£¬×îºóÈÔÊ§°ÜÊ±·µ»Ø0¸öÔªËØµÄÁĞ±í.
+		/// å¤±è´¥æ—¶å›é€€ï¼Œä¸æŠ›å‡ºå¼‚å¸¸ã€‚å…ˆæšä¸¾GACï¼Œå¤±è´¥æ—¶æšä¸¾å½“å‰åº”ç”¨ç¨‹åºåŸŸä¸­çš„ç¨‹åºé›†ï¼Œå†å¤±è´¥æ—¶è¿”å›è‡ªèº«ç¨‹åºé›†ï¼Œæœ€åä»å¤±è´¥æ—¶è¿”å›0ä¸ªå…ƒç´ çš„åˆ—è¡¨.
 		/// </summary>
 		Fallback = 2,
 	}
 
 	/// <summary>
-	/// Ö¸Ê¾ÓÉÈ«¾Ö³ÌĞò¼¯»º´æÖĞµÄ IAssemblyCacheItem ±íÊ¾µÄ³ÌĞò¼¯µÄÔ´¡£
+	/// æŒ‡ç¤ºç”±å…¨å±€ç¨‹åºé›†ç¼“å­˜ä¸­çš„ IAssemblyCacheItem è¡¨ç¤ºçš„ç¨‹åºé›†çš„æºã€‚
 	/// </summary>
 	public enum ASM_CACHE_FLAGS : int {
 		/// <summary>
-		/// Ê¹ÓÃ Ngen.exe Ã¶¾ÙÔ¤ÏÈ±àÒëµÄ³ÌĞò¼¯µÄ»º´æ¡£
+		/// ä½¿ç”¨ Ngen.exe æšä¸¾é¢„å…ˆç¼–è¯‘çš„ç¨‹åºé›†çš„ç¼“å­˜ã€‚
 		/// </summary>
 		ASM_CACHE_ZAP = 0x01,
 		/// <summary>
-		/// Ã¶¾ÙÈ«¾Ö³ÌĞò¼¯»º´æ¡£
+		/// æšä¸¾å…¨å±€ç¨‹åºé›†ç¼“å­˜ã€‚
 		/// </summary>
 		ASM_CACHE_GAC = 0x02,
 		/// <summary>
-		/// Ã¶¾ÙÒÑ¾­¸ù¾İĞèÒªÏÂÔØµÄ³ÌĞò¼¯»òÒÑ¾­½øĞĞÁËÓ°Ïñ¸´ÖÆµÄ³ÌĞò¼¯¡£
+		/// æšä¸¾å·²ç»æ ¹æ®éœ€è¦ä¸‹è½½çš„ç¨‹åºé›†æˆ–å·²ç»è¿›è¡Œäº†å½±åƒå¤åˆ¶çš„ç¨‹åºé›†ã€‚
 		/// </summary>
 		ASM_CACHE_DOWNLOAD = 0x04,
 		/// <summary>
-		/// ½öÔÚµ÷ÓÃ GetCachePath º¯ÊıµÄÉÏÏÂÎÄÖĞ£¬ASM_CACHE_ROOT ²ÅÓĞÒâÒå¡£
+		/// ä»…åœ¨è°ƒç”¨ GetCachePath å‡½æ•°çš„ä¸Šä¸‹æ–‡ä¸­ï¼ŒASM_CACHE_ROOT æ‰æœ‰æ„ä¹‰ã€‚
 		/// </summary>
 		ASM_CACHE_ROOT = 0x08
 	}
 
 	/// <summary>
-	/// Ö¸Ê¾½«Í¨¹ı IAssemblyName::GetDisplayName ·½·¨¼ìË÷ÆäÏÔÊ¾Ãû³ÆµÄ³ÌĞò¼¯µÄ°æ±¾¡¢ÄÚ²¿°æ±¾¡¢ÇøÓòĞÔ¡¢Ç©ÃûµÈ¡£
+	/// æŒ‡ç¤ºå°†é€šè¿‡ IAssemblyName::GetDisplayName æ–¹æ³•æ£€ç´¢å…¶æ˜¾ç¤ºåç§°çš„ç¨‹åºé›†çš„ç‰ˆæœ¬ã€å†…éƒ¨ç‰ˆæœ¬ã€åŒºåŸŸæ€§ã€ç­¾åç­‰ã€‚
 	/// </summary>
 	/// <remarks>http://msdn.microsoft.com/en-us/library/ms232947(v=vs.110).aspx</remarks>
 	public enum ASM_DISPLAY_FLAGS : int {
@@ -123,14 +123,14 @@ namespace ZylLib.System {
 	}
 
 	/// <summary>
-	/// Ìá¹©ÃèÊöºÍÊ¹ÓÃ³ÌĞò¼¯Î¨Ò»±êÊ¶µÄ·½·¨¡£
+	/// æä¾›æè¿°å’Œä½¿ç”¨ç¨‹åºé›†å”¯ä¸€æ ‡è¯†çš„æ–¹æ³•ã€‚
 	/// </summary>
 	[ComImport]
 	[Guid("CD193BC0-B4BC-11d2-9833-00C04FC31D2E")]
 	[InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 	public interface IAssemblyName {
 		/// <summary>
-		/// ÉèÖÃÖ¸¶¨µÄ PropertyId ËùÒıÓÃµÄÊôĞÔµÄÖµ¡£
+		/// è®¾ç½®æŒ‡å®šçš„ PropertyId æ‰€å¼•ç”¨çš„å±æ€§çš„å€¼ã€‚
 		/// </summary>
 		/// <param name="PropertyId"></param>
 		/// <param name="pvProperty"></param>
@@ -141,7 +141,7 @@ namespace ZylLib.System {
 			/* [in] */ int cbProperty);
 
 		/// <summary>
-		/// »ñÈ¡Ò»¸öÖ¸Õë£¬¸ÃÖ¸ÕëÖ¸ÏòÖ¸¶¨µÄ PropertyId ÒıÓÃµÄÊôĞÔ¡£
+		/// è·å–ä¸€ä¸ªæŒ‡é’ˆï¼Œè¯¥æŒ‡é’ˆæŒ‡å‘æŒ‡å®šçš„ PropertyId å¼•ç”¨çš„å±æ€§ã€‚
 		/// </summary>
 		/// <param name="PropertyId"></param>
 		/// <param name="pvProperty"></param>
@@ -151,15 +151,15 @@ namespace ZylLib.System {
 			/* [out] */ IntPtr pvProperty,
 			/* [out][in] */ out int pcbProperty);
 
-#pragma warning disable 0465	// ÒıÈë¡°Finalize¡±·½·¨»á·Á°­Îö¹¹º¯Êıµ÷ÓÃ¡£ÄúÊÇÒªÉùÃ÷Îö¹¹º¯ÊıÂğ?
+#pragma warning disable 0465	// å¼•å…¥â€œFinalizeâ€æ–¹æ³•ä¼šå¦¨ç¢ææ„å‡½æ•°è°ƒç”¨ã€‚æ‚¨æ˜¯è¦å£°æ˜ææ„å‡½æ•°å—?
 		/// <summary>
-		/// ÔÊĞí´Ë IAssemblyName ¶ÔÏóÔÚÆäÎö¹¹º¯Êı±»µ÷ÓÃÖ®Ç°ÊÍ·Å×ÊÔ´²¢Ö´ĞĞÆäËûÇåÀí²Ù×÷¡£
+		/// å…è®¸æ­¤ IAssemblyName å¯¹è±¡åœ¨å…¶ææ„å‡½æ•°è¢«è°ƒç”¨ä¹‹å‰é‡Šæ”¾èµ„æºå¹¶æ‰§è¡Œå…¶ä»–æ¸…ç†æ“ä½œã€‚
 		/// </summary>
 		void Finalize();
 #pragma warning restore 0465
 
 		/// <summary>
-		/// »ñÈ¡´Ë IAssemblyName ¶ÔÏóÒıÓÃµÄ³ÌĞò¼¯µÄ¿É¶ÁÃû³Æ¡£
+		/// è·å–æ­¤ IAssemblyName å¯¹è±¡å¼•ç”¨çš„ç¨‹åºé›†çš„å¯è¯»åç§°ã€‚
 		/// </summary>
 		/// <param name="szDisplayName"></param>
 		/// <param name="pccDisplayName"></param>
@@ -191,7 +191,7 @@ namespace ZylLib.System {
 			/* [out] */ IntPtr ppReserved);
 
 		/// <summary>
-		/// »ñÈ¡´Ë IAssemblyName ¶ÔÏóÒıÓÃµÄ³ÌĞò¼¯µÄ¼òµ¥¡¢Î´¼ÓÃÜÃû³Æ¡£
+		/// è·å–æ­¤ IAssemblyName å¯¹è±¡å¼•ç”¨çš„ç¨‹åºé›†çš„ç®€å•ã€æœªåŠ å¯†åç§°ã€‚
 		/// </summary>
 		/// <param name="lpcwBuffer"></param>
 		/// <param name="pwzName"></param>
@@ -200,7 +200,7 @@ namespace ZylLib.System {
 			/* [out] */ StringBuilder pwzName);
 
 		/// <summary>
-		/// »ñÈ¡´Ë IAssemblyName ¶ÔÏóËùÒıÓÃµÄ³ÌĞò¼¯µÄ°æ±¾ĞÅÏ¢¡£
+		/// è·å–æ­¤ IAssemblyName å¯¹è±¡æ‰€å¼•ç”¨çš„ç¨‹åºé›†çš„ç‰ˆæœ¬ä¿¡æ¯ã€‚
 		/// </summary>
 		/// <param name="pdwVersionHi"></param>
 		/// <param name="pdwVersionLow"></param>
@@ -209,7 +209,7 @@ namespace ZylLib.System {
 			/* [out] */ out Int32 pdwVersionLow);
 
 		/// <summary>
-		/// ¸ù¾İÖ¸¶¨µÄ±È½Ï±êÖ¾£¬È·¶¨Ö¸¶¨µÄ IAssemblyName ¶ÔÏóÊÇ·ñÓë´Ë IAssemblyName ÏàÍ¬¡£
+		/// æ ¹æ®æŒ‡å®šçš„æ¯”è¾ƒæ ‡å¿—ï¼Œç¡®å®šæŒ‡å®šçš„ IAssemblyName å¯¹è±¡æ˜¯å¦ä¸æ­¤ IAssemblyName ç›¸åŒã€‚
 		/// </summary>
 		/// <param name="pName"></param>
 		/// <param name="dwCmpFlags"></param>
@@ -218,7 +218,7 @@ namespace ZylLib.System {
 			/* [in] */ int dwCmpFlags);
 
 		/// <summary>
-		/// ´´½¨´Ë IAssemblyName ¶ÔÏóµÄÇ³±í¸±±¾¡£
+		/// åˆ›å»ºæ­¤ IAssemblyName å¯¹è±¡çš„æµ…è¡¨å‰¯æœ¬ã€‚
 		/// </summary>
 		/// <param name="pName"></param>
 		void Clone(
@@ -228,36 +228,36 @@ namespace ZylLib.System {
 #endif
 
 	/// <summary>
-	/// GAC(Global Assembly Cache) ¹¤¾ßÀà.
+	/// GAC(Global Assembly Cache) å·¥å…·ç±».
 	/// </summary>
 	public static class GacUtil {
 		/// <summary>
-		/// Ä¬ÈÏ×Ö·û´®»º³åÇø³¤¶È.
+		/// é»˜è®¤å­—ç¬¦ä¸²ç¼“å†²åŒºé•¿åº¦.
 		/// </summary>
 		public static readonly int DefaultStringBufferSize = 0x1000;
 
 #if (!PORTABLE)
 		/// <summary>
-		/// »ñÈ¡Ò»¸öÖ¸Õë£¬¸ÃÖ¸ÕëÖ¸Ïò IAssemblyEnum ÊµÀı£¬¸ÃÊµÀı¿ÉÃ¶¾Ù¾ßÓĞÖ¸¶¨ IAssemblyName µÄ³ÌĞò¼¯ÖĞµÄ¶ÔÏó¡£
+		/// è·å–ä¸€ä¸ªæŒ‡é’ˆï¼Œè¯¥æŒ‡é’ˆæŒ‡å‘ IAssemblyEnum å®ä¾‹ï¼Œè¯¥å®ä¾‹å¯æšä¸¾å…·æœ‰æŒ‡å®š IAssemblyName çš„ç¨‹åºé›†ä¸­çš„å¯¹è±¡ã€‚
 		/// </summary>
-		/// <param name="pEnum">Ö¸ÏòÒ»¸öÄÚ´æÎ»ÖÃµÄÖ¸Õë£¬¸ÃÄÚ´æÎ»ÖÃ°üº¬ÇëÇóµÄ IAssemblyEnum Ö¸Õë¡£</param>
-		/// <param name="pUnkReserved">±£ÁôÒÔÓÃÓÚ½«À´À©Õ¹¡£pUnkReserved ±ØĞëÎª null ÒıÓÃ¡£</param>
-		/// <param name="pName">ÇëÇóµÄ³ÌĞò¼¯µÄ IAssemblyName¡£´ËÃû³ÆÓÃÓÚÉ¸Ñ¡Ã¶¾Ù¡£Ëü¿ÉÒÔÎª null£¬ÒÔÃ¶¾ÙÈ«¾Ö³ÌĞò¼¯»º´æÖĞµÄËùÓĞ³ÌĞò¼¯¡£</param>
-		/// <param name="dwFlags">ÓÃÓÚĞŞ¸ÄÃ¶¾ÙÊıĞĞÎªµÄ±êÖ¾¡£´Ë²ÎÊıÕıºÃ°üº¬ ASM_CACHE_FLAGS Ã¶¾ÙÖĞµÄÒ»Î»¡£</param>
-		/// <param name="pvReserved">±£ÁôÒÔÓÃÓÚ½«À´À©Õ¹¡£pvReserved ±ØĞëÎª null ÒıÓÃ¡£</param>
+		/// <param name="pEnum">æŒ‡å‘ä¸€ä¸ªå†…å­˜ä½ç½®çš„æŒ‡é’ˆï¼Œè¯¥å†…å­˜ä½ç½®åŒ…å«è¯·æ±‚çš„ IAssemblyEnum æŒ‡é’ˆã€‚</param>
+		/// <param name="pUnkReserved">ä¿ç•™ä»¥ç”¨äºå°†æ¥æ‰©å±•ã€‚pUnkReserved å¿…é¡»ä¸º null å¼•ç”¨ã€‚</param>
+		/// <param name="pName">è¯·æ±‚çš„ç¨‹åºé›†çš„ IAssemblyNameã€‚æ­¤åç§°ç”¨äºç­›é€‰æšä¸¾ã€‚å®ƒå¯ä»¥ä¸º nullï¼Œä»¥æšä¸¾å…¨å±€ç¨‹åºé›†ç¼“å­˜ä¸­çš„æ‰€æœ‰ç¨‹åºé›†ã€‚</param>
+		/// <param name="dwFlags">ç”¨äºä¿®æ”¹æšä¸¾æ•°è¡Œä¸ºçš„æ ‡å¿—ã€‚æ­¤å‚æ•°æ­£å¥½åŒ…å« ASM_CACHE_FLAGS æšä¸¾ä¸­çš„ä¸€ä½ã€‚</param>
+		/// <param name="pvReserved">ä¿ç•™ä»¥ç”¨äºå°†æ¥æ‰©å±•ã€‚pvReserved å¿…é¡»ä¸º null å¼•ç”¨ã€‚</param>
 		/// <returns>HRESULT</returns>
 		[DllImport("fusion.dll")]
 		internal static extern IntPtr CreateAssemblyEnum(out IAssemblyEnum pEnum, IntPtr pUnkReserved, IntPtr pName, ASM_CACHE_FLAGS dwFlags, IntPtr pvReserved);
 
 		/// <summary>
-		/// Ã¶¾Ù <see cref="IAssemblyName"/> ĞÅÏ¢.
+		/// æšä¸¾ <see cref="IAssemblyName"/> ä¿¡æ¯.
 		/// </summary>
-		/// <param name="dwCacheFlags">»º´æ±êÖ¾.</param>
-		/// <returns>·µ»Ø <see cref="IEnumerable&lt;IAssemblyName&gt;"/>. </returns>
-		/// <exception cref="global::System.DllNotFoundException">ÔÚmonoµÈ»·¾³ÏÂÓĞ¿ÉÄÜÕÒ²»µ½dll.</exception>
+		/// <param name="dwCacheFlags">ç¼“å­˜æ ‡å¿—.</param>
+		/// <returns>è¿”å› <see cref="IEnumerable&lt;IAssemblyName&gt;"/>. </returns>
+		/// <exception cref="global::System.DllNotFoundException">åœ¨monoç­‰ç¯å¢ƒä¸‹æœ‰å¯èƒ½æ‰¾ä¸åˆ°dll.</exception>
 		public static IEnumerable<IAssemblyName> EnumerateIAssemblyName(ASM_CACHE_FLAGS dwCacheFlags) {
 			IAssemblyEnum gacEnum;
-			//´´½¨GAC³ÌĞò¼¯µÄÃ¶¾ÙÆ÷
+			//åˆ›å»ºGACç¨‹åºé›†çš„æšä¸¾å™¨
 			CreateAssemblyEnum(out gacEnum, IntPtr.Zero, IntPtr.Zero, dwCacheFlags, IntPtr.Zero);
 			if (null!=gacEnum)
 			{
@@ -268,14 +268,14 @@ namespace ZylLib.System {
 						yield return asm;
 						//StringBuilder sbuf = new StringBuilder(1024);
 						//uint ccbuf = 1024;
-						////»ñÈ¡³ÌĞò¼¯ÏÔÊ¾Ãû³Æ
+						////è·å–ç¨‹åºé›†æ˜¾ç¤ºåç§°
 						//asm.GetName(ref ccbuf, sbuf);
-						////´òÓ¡³ÌĞò¼¯Ãû³Æ
+						////æ‰“å°ç¨‹åºé›†åç§°
 						//Console.WriteLine(sbuf.ToString());
-						//ÊÍ·ÅCOM¶ÔÏó
+						//é‡Šæ”¾COMå¯¹è±¡
 						Marshal.ReleaseComObject(asm);
 						asm = null;
-						//Ã¶¾ÙÏÂÒ»¸ö
+						//æšä¸¾ä¸‹ä¸€ä¸ª
 						gacEnum.GetNextAssembly(IntPtr.Zero, out asm, 0);
 					}
 				}
@@ -286,21 +286,21 @@ namespace ZylLib.System {
 		}
 
 		/// <summary>
-		/// ÔÚGACÖĞÃ¶¾Ù <see cref="IAssemblyName"/> ĞÅÏ¢.
+		/// åœ¨GACä¸­æšä¸¾ <see cref="IAssemblyName"/> ä¿¡æ¯.
 		/// </summary>
-		/// <returns>·µ»Ø <see cref="IEnumerable&lt;IAssemblyName&gt;"/>. </returns>
-		/// <exception cref="global::System.DllNotFoundException">ÔÚmonoµÈ»·¾³ÏÂÓĞ¿ÉÄÜÕÒ²»µ½dll.</exception>
+		/// <returns>è¿”å› <see cref="IEnumerable&lt;IAssemblyName&gt;"/>. </returns>
+		/// <exception cref="global::System.DllNotFoundException">åœ¨monoç­‰ç¯å¢ƒä¸‹æœ‰å¯èƒ½æ‰¾ä¸åˆ°dll.</exception>
 		public static IEnumerable<IAssemblyName> GacEnumerateIAssemblyName() {
 			return EnumerateIAssemblyName(ASM_CACHE_FLAGS.ASM_CACHE_GAC);
 		}
 
 		/// <summary>
-		/// Ã¶¾Ù³ÌĞò¼¯Ãû³Æ.
+		/// æšä¸¾ç¨‹åºé›†åç§°.
 		/// </summary>
-		/// <param name="dwCacheFlags">»º´æ±êÖ¾.</param>
-		/// <param name="dwDisplayFlags">ÏÔÊ¾±êÖ¾.</param>
-		/// <returns>·µ»Ø <see cref="IEnumerable&lt;String&gt;"/>. </returns>
-		/// <exception cref="global::System.DllNotFoundException">ÔÚmonoµÈ»·¾³ÏÂÓĞ¿ÉÄÜÕÒ²»µ½dll.</exception>
+		/// <param name="dwCacheFlags">ç¼“å­˜æ ‡å¿—.</param>
+		/// <param name="dwDisplayFlags">æ˜¾ç¤ºæ ‡å¿—.</param>
+		/// <returns>è¿”å› <see cref="IEnumerable&lt;String&gt;"/>. </returns>
+		/// <exception cref="global::System.DllNotFoundException">åœ¨monoç­‰ç¯å¢ƒä¸‹æœ‰å¯èƒ½æ‰¾ä¸åˆ°dll.</exception>
 		public static IEnumerable<String> EnumerateAssemblyName(ASM_CACHE_FLAGS dwCacheFlags, ASM_DISPLAY_FLAGS dwDisplayFlags) {
 			foreach (IAssemblyName asm in EnumerateIAssemblyName(dwCacheFlags)) {
 				int ccbuf = DefaultStringBufferSize;
@@ -311,24 +311,24 @@ namespace ZylLib.System {
 		}
 
 		/// <summary>
-		/// ÔÚGACÖĞÃ¶¾Ù³ÌĞò¼¯Ãû³Æ.
+		/// åœ¨GACä¸­æšä¸¾ç¨‹åºé›†åç§°.
 		/// </summary>
-		/// <param name="dwDisplayFlags">ÏÔÊ¾±êÖ¾.</param>
-		/// <returns>·µ»Ø <see cref="IEnumerable&lt;String&gt;"/>. </returns>
-		/// <exception cref="global::System.DllNotFoundException">ÔÚmonoµÈ»·¾³ÏÂÓĞ¿ÉÄÜÕÒ²»µ½dll.</exception>
+		/// <param name="dwDisplayFlags">æ˜¾ç¤ºæ ‡å¿—.</param>
+		/// <returns>è¿”å› <see cref="IEnumerable&lt;String&gt;"/>. </returns>
+		/// <exception cref="global::System.DllNotFoundException">åœ¨monoç­‰ç¯å¢ƒä¸‹æœ‰å¯èƒ½æ‰¾ä¸åˆ°dll.</exception>
 		public static IEnumerable<String> GacEnumerateAssemblyName(ASM_DISPLAY_FLAGS dwDisplayFlags) {
 			return EnumerateAssemblyName(ASM_CACHE_FLAGS.ASM_CACHE_GAC, dwDisplayFlags);
 		}
 #endif
 
 		/// <summary>
-		/// È¡µÃ³ÌĞò¼¯Ãû³ÆÁĞ±í.
+		/// å–å¾—ç¨‹åºé›†åç§°åˆ—è¡¨.
 		/// </summary>
-		/// <param name="dwCacheFlags">»º´æ±êÖ¾.</param>
-		/// <param name="dwDisplayFlags">ÏÔÊ¾±êÖ¾.</param>
-		/// <param name="listoptions">ÁĞ±íÑ¡Ïî.</param>
-		/// <returns>·µ»Ø³ÌĞò¼¯Ãû³ÆÁĞ±í.</returns>
-		/// <exception cref="global::System.DllNotFoundException">µ± <paramref name="listoptions"/> Ã»ÓĞ <see cref="GacGetListOptions.Fallback"/> ±êÖ¾Ê± , ÔÚmonoµÈ»·¾³ÏÂÓĞ¿ÉÄÜÕÒ²»µ½dll.</exception>
+		/// <param name="dwCacheFlags">ç¼“å­˜æ ‡å¿—.</param>
+		/// <param name="dwDisplayFlags">æ˜¾ç¤ºæ ‡å¿—.</param>
+		/// <param name="listoptions">åˆ—è¡¨é€‰é¡¹.</param>
+		/// <returns>è¿”å›ç¨‹åºé›†åç§°åˆ—è¡¨.</returns>
+		/// <exception cref="global::System.DllNotFoundException">å½“ <paramref name="listoptions"/> æ²¡æœ‰ <see cref="GacGetListOptions.Fallback"/> æ ‡å¿—æ—¶ , åœ¨monoç­‰ç¯å¢ƒä¸‹æœ‰å¯èƒ½æ‰¾ä¸åˆ°dll.</exception>
 		public static List<String> GetAssemblyNameList(ASM_CACHE_FLAGS dwCacheFlags, ASM_DISPLAY_FLAGS dwDisplayFlags, GacGetListOptions listoptions) {
 			List<String> lst = new List<string>();
 			// get list.
@@ -342,16 +342,16 @@ namespace ZylLib.System {
 			}
 			catch {
 				if (0==(listoptions & GacGetListOptions.Fallback)) {
-					// Ã»ÓĞ±êÊ¶, ÖØÅ×Òì³£.
+					// æ²¡æœ‰æ ‡è¯†, é‡æŠ›å¼‚å¸¸.
 					throw;
 				}
 				else {
-					// ºöÂÔ.
+					// å¿½ç•¥.
 				}
 			}
 #endif
 			if (0 != (listoptions & GacGetListOptions.Fallback) && dwCacheFlags == ASM_CACHE_FLAGS.ASM_CACHE_GAC) {
-				// ³¢ÊÔÃ¶¾Ùµ±Ç°Ó¦ÓÃ³ÌĞòÓò.
+				// å°è¯•æšä¸¾å½“å‰åº”ç”¨ç¨‹åºåŸŸ.
 #if (!NETFX_CORE && !PORTABLE)
 				if (!isok && lst.Count == 0) {
 					try {
@@ -361,11 +361,11 @@ namespace ZylLib.System {
 						isok = true;
 					}
 					catch {
-						// ºöÂÔ.
+						// å¿½ç•¥.
 					}
 				}
 #endif
-				// ³¢ÊÔËùÔÚ³ÌĞò¼¯.
+				// å°è¯•æ‰€åœ¨ç¨‹åºé›†.
 				if (!isok && lst.Count == 0) {
 					Type tp = typeof(GacUtil);
 #if (NETFX_CORE)
@@ -386,12 +386,12 @@ namespace ZylLib.System {
 		}
 
 		/// <summary>
-		/// ÔÚGacÖĞÈ¡µÃ³ÌĞò¼¯Ãû³ÆÁĞ±í.
+		/// åœ¨Gacä¸­å–å¾—ç¨‹åºé›†åç§°åˆ—è¡¨.
 		/// </summary>
-		/// <param name="dwDisplayFlags">ÏÔÊ¾±êÖ¾.</param>
-		/// <param name="listoptions">ÁĞ±íÑ¡Ïî.</param>
-		/// <returns>·µ»Ø³ÌĞò¼¯Ãû³ÆÁĞ±í.</returns>
-		/// <exception cref="global::System.DllNotFoundException">ÔÚmonoµÈ»·¾³ÏÂÓĞ¿ÉÄÜÕÒ²»µ½dll.</exception>
+		/// <param name="dwDisplayFlags">æ˜¾ç¤ºæ ‡å¿—.</param>
+		/// <param name="listoptions">åˆ—è¡¨é€‰é¡¹.</param>
+		/// <returns>è¿”å›ç¨‹åºé›†åç§°åˆ—è¡¨.</returns>
+		/// <exception cref="global::System.DllNotFoundException">åœ¨monoç­‰ç¯å¢ƒä¸‹æœ‰å¯èƒ½æ‰¾ä¸åˆ°dll.</exception>
 		public static List<String> GacGetAssemblyNameList(ASM_DISPLAY_FLAGS dwDisplayFlags, GacGetListOptions listoptions) {
 			return GetAssemblyNameList(ASM_CACHE_FLAGS.ASM_CACHE_GAC, dwDisplayFlags, listoptions);
 		}
